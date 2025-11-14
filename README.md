@@ -1,73 +1,97 @@
-# React + TypeScript + Vite
+# 📝 Interactive Portfolio Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, kullanıcı dostu bir CV (resume) oluşturma platformu. Kullanıcılar hazır şablonlarla profesyonel CV'lerini kolayca oluşturabilir, düzenleyebilir ve PDF olarak indirebilir.
 
-Currently, two official plugins are available:
+## ✨ Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **5 Farklı Şablon**: Modern, Klasik, Minimal, Yaratıcı ve Profesyonel tasarımlar
+- 🌍 **Çoklu Dil Desteği**: Türkçe ve İngilizce arayüz (i18next)
+- 🎯 **Sürükle-Bırak Editör**: Kolay kullanımlı görsel editör (yakında)
+- 📦 **Modüler Komponentler**: Header, İletişim, Deneyim, Eğitim, Beceriler, Projeler ve daha fazlası
+- 🎨 **Özelleştirme**: Renkler, fontlar ve düzen ayarları
+- 💾 **Otomatik Kayıt**: LocalStorage ile verileriniz güvende
+- 📄 **PDF Export**: Yüksek kalitede PDF indirme (yakında)
 
-## React Compiler
+## 🚀 Hızlı Başlangıç
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Gereksinimler
 
-## Expanding the ESLint configuration
+- Node.js 18+
+- npm veya yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Kurulum
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Bağımlılıkları yükle
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Geliştirme sunucusunu başlat
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Production build
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Proje Yapısı
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/       # React komponentleri
+│   ├── layout/      # Layout komponentleri (Header, Layout)
+│   └── ui/          # UI komponentleri (Button, vb.)
+├── pages/           # Sayfa komponentleri
+├── stores/          # Zustand state yönetimi
+├── types/           # TypeScript tipleri
+├── interfaces/      # Interface tanımlamaları
+├── locales/         # i18n çeviri dosyaları (tr, en)
+├── utils/           # Yardımcı fonksiyonlar
+└── hooks/           # Custom React hooks
+```
+
+## 🛠️ Teknolojiler
+
+- **React 19** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **Zustand** - State management
+- **React Router v7** - Routing
+- **Tailwind CSS v4** - Styling
+- **i18next** - Internationalization (TR/EN)
+- **react-toastify** - Toast notifications
+- **React Hook Form + Zod** - Form yönetimi
+- **@dnd-kit/core** - Drag & drop
+- **Radix UI** - Accessible UI components
+
+## 📖 Kullanım
+
+1. **Dil Seçin**: Header'daki 🌍 butonuyla Türkçe/İngilizce arasında geçiş yapın
+2. **Şablon Seç**: Ana sayfadan başlayın ve beğendiğiniz şablonu seçin
+3. **Düzenle**: Editörde CV'nizi oluşturun ve özelleştirin
+4. **Önizle**: Sonuçları canlı olarak görün
+5. **İndir**: PDF olarak bilgisayarınıza kaydedin
+
+## 📚 Dökümantasyon
+
+Detaylı proje planı ve dokümantasyon için [PLAN.md](./PLAN.md) dosyasına bakın.
+
+## 🔮 Gelecek Özellikler
+
+- [ ] Gelişmiş sürükle-bırak düzenleme
+- [ ] PDF export işlevselliği
+- [ ] Daha fazla şablon seçeneği
+- [ ] Resim yükleme
+- [ ] Cloud storage entegrasyonu
+- [x] ~~Çoklu dil desteği~~ ✅ Tamamlandı!
+- [x] ~~Toast notification sistemi~~ ✅ Tamamlandı!
+
+## 🤝 Katkıda Bulunma
+
+Katkılarınızı bekliyoruz! Issue açabilir veya pull request gönderebilirsiniz.
+
+## 📄 Lisans
+
+Bu proje özel kullanım içindir.
+
+---
+
+**Not**: Proje aktif geliştirme aşamasındadır. Bazı özellikler henüz tamamlanmamıştır.

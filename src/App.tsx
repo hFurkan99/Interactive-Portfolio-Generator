@@ -1,5 +1,5 @@
-function App() {
-  return <>Hello</>;
-}
+import AppRoutes from "./routes";
 
-export default App;
+export default function App() {
+  return <AppRoutes />;
+}
