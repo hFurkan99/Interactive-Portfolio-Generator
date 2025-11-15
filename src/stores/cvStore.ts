@@ -1,7 +1,3 @@
-/**
- * CV Store - Main state management for CV documents
- */
-
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import { nanoid } from "@/utils/id";
@@ -144,6 +140,20 @@ export const useCVStore = create<CVStore>()(
           });
         },
 
+        deleteComponent: (componentId: string) => {
+          // Alias for removeComponent
+          get().removeComponent(componentId);
+        },
+
+        updateComponents: (components: CVComponentData[]) => {
+          const currentDoc = get().currentDocument;
+          if (!currentDoc) return;
+
+          get().updateDocument({
+            components,
+          });
+        },
+
         reorderComponents: (componentIds: string[]) => {
           const currentDoc = get().currentDocument;
           if (!currentDoc) return;
@@ -168,6 +178,41 @@ export const useCVStore = create<CVStore>()(
 
           const updatedComponents = currentDoc.components.map((comp) =>
             comp.id === componentId ? { ...comp, visible: !comp.visible } : comp
+          );
+
+          get().updateDocument({
+            components: updatedComponents,
+          });
+        },
+
+        // Page Management
+        addNewPage: () => {
+          const currentDoc = get().currentDocument;
+          if (!currentDoc) return 1;
+
+          // Find the highest page number
+          const maxPage =
+            currentDoc.components.length > 0
+              ? Math.max(...currentDoc.components.map((c) => c.pageNumber))
+              : 0;
+
+          const newPageNumber = maxPage + 1;
+
+          // Force a re-render by updating the document
+          // The page will appear in the UI even if empty
+          get().updateDocument({
+            updatedAt: new Date().toISOString(),
+          });
+
+          return newPageNumber;
+        },
+
+        moveComponentToPage: (componentId: string, targetPage: number) => {
+          const currentDoc = get().currentDocument;
+          if (!currentDoc) return;
+
+          const updatedComponents = currentDoc.components.map((comp) =>
+            comp.id === componentId ? { ...comp, pageNumber: targetPage } : comp
           );
 
           get().updateDocument({

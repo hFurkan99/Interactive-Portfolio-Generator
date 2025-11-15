@@ -1,7 +1,3 @@
-/**
- * Editor Store - UI state for the CV editor
- */
-
 import type { CVDocument } from "@/interfaces/cVDocument.interfaces";
 import type { EditorStore } from "@/interfaces/storeInterfaces/editorStore.interfaces";
 import { create } from "zustand";

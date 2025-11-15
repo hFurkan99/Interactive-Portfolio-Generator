@@ -1,7 +1,3 @@
-/**
- * UI Store - Global UI state management
- */
-
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 import type { UIStore } from "@/interfaces/storeInterfaces/uIStore.interfaces";

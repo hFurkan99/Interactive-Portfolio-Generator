@@ -72,6 +72,7 @@ export default {
       editorArea: "Editör alanı - Komponentler buraya eklenecek",
       notFound: "CV bulunamadı",
       backToTemplates: "Şablon seçimine dön",
+      added: "Eklendi",
     },
 
     // Preview
@@ -94,6 +95,89 @@ export default {
       certifications: "Sertifikalar",
       languages: "Diller",
       customSection: "Özel Bölüm",
+    },
+
+    // Header Form
+    headerForm: {
+      fullname: "Ad Soyad",
+      title: "Profesyonel Unvan",
+      photoUrl: "Fotoğraf URL",
+      validations: {
+        nameRequired: "Ad soyad alanı zorunludur",
+        titleRequired: "Profesyonel unvan alanı zorunludur",
+      },
+    },
+
+    // Contact Form validations
+    contactForm: {
+      validations: {
+        invalidEmail: "Geçersiz e-posta",
+        invalidUrl: "Geçersiz URL",
+      },
+    },
+
+    // Summary Form validations
+    summaryForm: {
+      validations: {
+        summaryRequired: "Özet alanı gerekli",
+      },
+    },
+
+    // Experience Form validations
+    experienceForm: {
+      validations: {
+        companyRequired: "Şirket alanı zorunludur",
+        positionRequired: "Pozisyon alanı zorunludur",
+        startDateRequired: "Başlangıç tarihi alanı zorunludur",
+        atLeastOneExperience: "En az bir deneyim gereklidir",
+      },
+    },
+
+    // Education Form validations
+    educationForm: {
+      validations: {
+        institutionRequired: "Kurum alanı zorunludur",
+        degreeRequired: "Derece alanı zorunludur",
+        startDateRequired: "Başlangıç tarihi alanı zorunludur",
+        atLeastOneEducation: "En az bir eğitim gereklidir",
+      },
+    },
+
+    // Skills Form validations
+    skillsForm: {
+      validations: {
+        skillNameRequired: "Yetenek adı gerekli",
+        atLeastOneSkill: "En az bir yetenek gereklidir",
+      },
+    },
+
+    // Projects Form validations
+    projectsForm: {
+      validations: {
+        projectNameRequired: "Proje adı gerekli",
+        descriptionRequired: "Açıklama gerekli",
+        invalidUrl: "Geçersiz URL",
+        atLeastOneProject: "En az bir proje gereklidir",
+      },
+    },
+
+    // Certifications Form validations
+    certificationsForm: {
+      validations: {
+        certificationNameRequired: "Sertifika adı gerekli",
+        issuerRequired: "Veren kuruluş gerekli",
+        dateRequired: "Tarih gerekli",
+        invalidUrl: "Geçersiz URL",
+        atLeastOneCertification: "En az bir sertifika gereklidir",
+      },
+    },
+
+    // Languages Form validations
+    languagesForm: {
+      validations: {
+        languageRequired: "Dil alanı zorunludur",
+        atLeastOneLanguage: "En az bir dil gereklidir",
+      },
     },
 
     // Skills
@@ -120,6 +204,7 @@ export default {
       cancel: "İptal",
       delete: "Sil",
       add: "Ekle",
+      optional: "İsteğe bağlı",
       edit: "Düzenle",
       save: "Kaydet",
       close: "Kapat",

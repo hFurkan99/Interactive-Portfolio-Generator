@@ -72,6 +72,7 @@ export default {
       editorArea: "Editor area - Components will be added here",
       notFound: "CV not found",
       backToTemplates: "Back to template selection",
+      added: "Added",
     },
 
     // Preview
@@ -94,6 +95,89 @@ export default {
       certifications: "Certifications",
       languages: "Languages",
       customSection: "Custom Section",
+    },
+
+    // Header Form
+    headerForm: {
+      fullname: "Full name",
+      title: "Professional Title",
+      photoUrl: "Photo URL",
+      validations: {
+        nameRequired: "Name is required",
+        titleRequired: "Professional title is required",
+      },
+    },
+
+    // Contact Form validations
+    contactForm: {
+      validations: {
+        invalidEmail: "Invalid email",
+        invalidUrl: "Invalid URL",
+      },
+    },
+
+    // Summary Form validations
+    summaryForm: {
+      validations: {
+        summaryRequired: "Summary is required",
+      },
+    },
+
+    // Experience Form validations
+    experienceForm: {
+      validations: {
+        companyRequired: "Company is required",
+        positionRequired: "Position is required",
+        startDateRequired: "Start date is required",
+        atLeastOneExperience: "At least one experience required",
+      },
+    },
+
+    // Education Form validations
+    educationForm: {
+      validations: {
+        institutionRequired: "Institution is required",
+        degreeRequired: "Degree is required",
+        startDateRequired: "Start date is required",
+        atLeastOneEducation: "At least one education required",
+      },
+    },
+
+    // Skills Form validations
+    skillsForm: {
+      validations: {
+        skillNameRequired: "Skill name is required",
+        atLeastOneSkill: "At least one skill required",
+      },
+    },
+
+    // Projects Form validations
+    projectsForm: {
+      validations: {
+        projectNameRequired: "Project name is required",
+        descriptionRequired: "Description is required",
+        invalidUrl: "Invalid URL",
+        atLeastOneProject: "At least one project required",
+      },
+    },
+
+    // Certifications Form validations
+    certificationsForm: {
+      validations: {
+        certificationNameRequired: "Certification name is required",
+        issuerRequired: "Issuer is required",
+        dateRequired: "Date is required",
+        invalidUrl: "Invalid URL",
+        atLeastOneCertification: "At least one certification required",
+      },
+    },
+
+    // Languages Form validations
+    languagesForm: {
+      validations: {
+        languageRequired: "Language is required",
+        atLeastOneLanguage: "At least one language required",
+      },
     },
 
     // Skills
@@ -120,6 +204,7 @@ export default {
       cancel: "Cancel",
       delete: "Delete",
       add: "Add",
+      optional: "Optional",
       edit: "Edit",
       save: "Save",
       close: "Close",

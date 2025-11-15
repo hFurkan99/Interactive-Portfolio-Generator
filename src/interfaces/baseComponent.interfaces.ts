@@ -5,4 +5,10 @@ export interface BaseComponent {
   type: ComponentType;
   order: number;
   visible: boolean;
+  pageNumber: number; // Which page this component is on (1, 2, 3...)
+  position?: {
+    // Optional: for future precise positioning
+    x?: number;
+    y?: number;
+  };
 }
