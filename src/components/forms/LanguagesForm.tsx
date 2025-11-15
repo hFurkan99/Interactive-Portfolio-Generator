@@ -112,7 +112,9 @@ export function LanguagesForm({ onSubmit, defaultValues }: LanguagesFormProps) {
       </Button>
 
       {errors.items?.root && (
-        <p className="text-red-500 text-sm">{t(errors.items.root.message as string)}</p>
+        <p className="text-red-500 text-sm">
+          {t(errors.items.root.message as string)}
+        </p>
       )}
 
       <Button type="submit" className="w-full">

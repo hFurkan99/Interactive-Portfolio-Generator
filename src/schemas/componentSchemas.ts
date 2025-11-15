@@ -15,19 +15,38 @@ export type HeaderFormData = z.infer<typeof headerSchema>;
 
 // Contact Component Schema
 export const contactSchema = z.object({
-  email: z.string().email("contactForm.validations.invalidEmail").optional().or(z.literal("")),
+  email: z
+    .string()
+    .email("contactForm.validations.invalidEmail")
+    .optional()
+    .or(z.literal("")),
   phone: z.string().optional(),
   location: z.string().optional(),
-  website: z.string().url("contactForm.validations.invalidUrl").optional().or(z.literal("")),
-  linkedin: z.string().url("contactForm.validations.invalidUrl").optional().or(z.literal("")),
-  github: z.string().url("contactForm.validations.invalidUrl").optional().or(z.literal("")),
+  website: z
+    .string()
+    .url("contactForm.validations.invalidUrl")
+    .optional()
+    .or(z.literal("")),
+  linkedin: z
+    .string()
+    .url("contactForm.validations.invalidUrl")
+    .optional()
+    .or(z.literal("")),
+  github: z
+    .string()
+    .url("contactForm.validations.invalidUrl")
+    .optional()
+    .or(z.literal("")),
 });
 
 export type ContactFormData = z.infer<typeof contactSchema>;
 
 // Summary Component Schema
 export const summarySchema = z.object({
-  content: z.string().min(1, "summaryForm.validations.summaryRequired").max(1000),
+  content: z
+    .string()
+    .min(1, "summaryForm.validations.summaryRequired")
+    .max(1000),
 });
 
 export type SummaryFormData = z.infer<typeof summarySchema>;
@@ -54,7 +73,9 @@ export type ExperienceFormData = z.infer<typeof experienceSchema>;
 
 // Education Component Schema
 export const educationItemSchema = z.object({
-  institution: z.string().min(1, "educationForm.validations.institutionRequired"),
+  institution: z
+    .string()
+    .min(1, "educationForm.validations.institutionRequired"),
   degree: z.string().min(1, "educationForm.validations.degreeRequired"),
   field: z.string().optional(),
   location: z.string().optional(),
@@ -66,7 +87,9 @@ export const educationItemSchema = z.object({
 });
 
 export const educationSchema = z.object({
-  items: z.array(educationItemSchema).min(1, "educationForm.validations.atLeastOneEducation"),
+  items: z
+    .array(educationItemSchema)
+    .min(1, "educationForm.validations.atLeastOneEducation"),
 });
 
 export type EducationFormData = z.infer<typeof educationSchema>;
@@ -79,7 +102,9 @@ export const skillItemSchema = z.object({
 });
 
 export const skillsSchema = z.object({
-  items: z.array(skillItemSchema).min(1, "skillsForm.validations.atLeastOneSkill"),
+  items: z
+    .array(skillItemSchema)
+    .min(1, "skillsForm.validations.atLeastOneSkill"),
 });
 
 export type SkillsFormData = z.infer<typeof skillsSchema>;
@@ -87,29 +112,47 @@ export type SkillsFormData = z.infer<typeof skillsSchema>;
 // Projects Component Schema
 export const projectItemSchema = z.object({
   name: z.string().min(1, "projectsForm.validations.projectNameRequired"),
-  description: z.string().min(1, "projectsForm.validations.descriptionRequired"),
+  description: z
+    .string()
+    .min(1, "projectsForm.validations.descriptionRequired"),
   technologies: z.array(z.string()).optional(),
-  url: z.string().url("projectsForm.validations.invalidUrl").optional().or(z.literal("")),
-  github: z.string().url("projectsForm.validations.invalidUrl").optional().or(z.literal("")),
+  url: z
+    .string()
+    .url("projectsForm.validations.invalidUrl")
+    .optional()
+    .or(z.literal("")),
+  github: z
+    .string()
+    .url("projectsForm.validations.invalidUrl")
+    .optional()
+    .or(z.literal("")),
   startDate: z.string().optional(),
   endDate: z.string().optional(),
   highlights: z.array(z.string()).optional(),
 });
 
 export const projectsSchema = z.object({
-  items: z.array(projectItemSchema).min(1, "projectsForm.validations.atLeastOneProject"),
+  items: z
+    .array(projectItemSchema)
+    .min(1, "projectsForm.validations.atLeastOneProject"),
 });
 
 export type ProjectsFormData = z.infer<typeof projectsSchema>;
 
 // Certifications Component Schema
 export const certificationItemSchema = z.object({
-  name: z.string().min(1, "certificationsForm.validations.certificationNameRequired"),
+  name: z
+    .string()
+    .min(1, "certificationsForm.validations.certificationNameRequired"),
   issuer: z.string().min(1, "certificationsForm.validations.issuerRequired"),
   date: z.string().min(1, "certificationsForm.validations.dateRequired"),
   expiryDate: z.string().optional(),
   credentialId: z.string().optional(),
-  url: z.string().url("certificationsForm.validations.invalidUrl").optional().or(z.literal("")),
+  url: z
+    .string()
+    .url("certificationsForm.validations.invalidUrl")
+    .optional()
+    .or(z.literal("")),
 });
 
 export const certificationsSchema = z.object({
@@ -127,7 +170,9 @@ export const languageItemSchema = z.object({
 });
 
 export const languagesSchema = z.object({
-  items: z.array(languageItemSchema).min(1, "languagesForm.validations.atLeastOneLanguage"),
+  items: z
+    .array(languageItemSchema)
+    .min(1, "languagesForm.validations.atLeastOneLanguage"),
 });
 
 export type LanguagesFormData = z.infer<typeof languagesSchema>;

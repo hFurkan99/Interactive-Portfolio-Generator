@@ -75,7 +75,9 @@ export default function HeaderForm({ onSubmit, defaultValues }: Props) {
           placeholder="https://example.com/photo.jpg"
         />
         {errors.photo && (
-          <p className="text-red-500 text-xs mt-1">{t(errors.photo.message as string)}</p>
+          <p className="text-red-500 text-xs mt-1">
+            {t(errors.photo.message as string)}
+          </p>
         )}
       </div>
 

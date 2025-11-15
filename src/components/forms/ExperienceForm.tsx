@@ -187,7 +187,9 @@ export default function ExperienceForm({ onSubmit, defaultValues }: Props) {
       </Button>
 
       {errors.items && (
-        <p className="text-red-500 text-xs">{t(errors.items.message as string)}</p>
+        <p className="text-red-500 text-xs">
+          {t(errors.items.message as string)}
+        </p>
       )}
 
       {/* Submit Button */}

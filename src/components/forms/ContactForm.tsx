@@ -48,7 +48,9 @@ export default function ContactForm({ onSubmit, defaultValues }: Props) {
           placeholder="john@example.com"
         />
         {errors.email && (
-          <p className="text-red-500 text-xs mt-1">{t(errors.email.message as string)}</p>
+          <p className="text-red-500 text-xs mt-1">
+            {t(errors.email.message as string)}
+          </p>
         )}
       </div>
 
@@ -62,7 +64,9 @@ export default function ContactForm({ onSubmit, defaultValues }: Props) {
           placeholder="+1 234 567 8900"
         />
         {errors.phone && (
-          <p className="text-red-500 text-xs mt-1">{t(errors.phone.message as string)}</p>
+          <p className="text-red-500 text-xs mt-1">
+            {t(errors.phone.message as string)}
+          </p>
         )}
       </div>
 
@@ -76,7 +80,9 @@ export default function ContactForm({ onSubmit, defaultValues }: Props) {
           placeholder="San Francisco, CA"
         />
         {errors.location && (
-          <p className="text-red-500 text-xs mt-1">{t(errors.location.message as string)}</p>
+          <p className="text-red-500 text-xs mt-1">
+            {t(errors.location.message as string)}
+          </p>
         )}
       </div>
 
@@ -90,7 +96,9 @@ export default function ContactForm({ onSubmit, defaultValues }: Props) {
           placeholder="https://johndoe.com"
         />
         {errors.website && (
-          <p className="text-red-500 text-xs mt-1">{t(errors.website.message as string)}</p>
+          <p className="text-red-500 text-xs mt-1">
+            {t(errors.website.message as string)}
+          </p>
         )}
       </div>
 
@@ -104,7 +112,9 @@ export default function ContactForm({ onSubmit, defaultValues }: Props) {
           placeholder="https://linkedin.com/in/johndoe"
         />
         {errors.linkedin && (
-          <p className="text-red-500 text-xs mt-1">{t(errors.linkedin.message as string)}</p>
+          <p className="text-red-500 text-xs mt-1">
+            {t(errors.linkedin.message as string)}
+          </p>
         )}
       </div>
 
@@ -118,7 +128,9 @@ export default function ContactForm({ onSubmit, defaultValues }: Props) {
           placeholder="https://github.com/johndoe"
         />
         {errors.github && (
-          <p className="text-red-500 text-xs mt-1">{t(errors.github.message as string)}</p>
+          <p className="text-red-500 text-xs mt-1">
+            {t(errors.github.message as string)}
+          </p>
         )}
       </div>
 

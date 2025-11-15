@@ -45,7 +45,9 @@ export default function SummaryForm({ onSubmit, defaultValues }: Props) {
           placeholder="Brief overview of your professional background, skills, and career objectives..."
         />
         {errors.content && (
-          <p className="text-red-500 text-xs mt-1">{t(errors.content.message as string)}</p>
+          <p className="text-red-500 text-xs mt-1">
+            {t(errors.content.message as string)}
+          </p>
         )}
         <p className="text-xs text-gray-500 mt-1">Max 1000 characters</p>
       </div>
